@@ -200,7 +200,4 @@ Focused on Systems Engineering, SDLC Automation, and LLM Orchestration. -->
 
 ---
 
-## License
-
-MIT.
 <p align="right">(<a href="#gradient-ascent">back to top</a>)</p>

@@ -1,3 +1,5 @@
+_This is the standalone version of Gradient Ascent, an AI Testing Engine. We have almost finished working on making it into a module (which can be drag-and-dropped into the target folder followed by importing and using it)_
+
 # Gradient Ascent
 ### Autonomous SDLC Orchestration Engine
 ![Language](https://img.shields.io/badge/Language-Python-blue) ![Platform](https://img.shields.io/badge/Platform-Web_%7C_SDK-green) ![License](https://img.shields.io/badge/License-MIT-orange) ![Status](https://img.shields.io/badge/Status-Hackathon-red)

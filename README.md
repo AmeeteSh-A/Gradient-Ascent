@@ -5,9 +5,9 @@ _This is the standalone version of Gradient Ascent, an AI Testing Engine. We hav
 ![Language](https://img.shields.io/badge/Language-Python-blue) ![Platform](https://img.shields.io/badge/Platform-Web_%7C_SDK-green) ![License](https://img.shields.io/badge/License-MIT-orange) ![Status](https://img.shields.io/badge/Status-Hackathon-red)
 
 ---
-### 🔗 Quick Links
-- [⚡ The Translation Gap](#-the-translation-gap) - [⚙️ Architecture](#️-architecture-the-three-phase-pipeline) - [📦 Installation Steps](#-getting-started)
-- [📐 Usage Example](#-usage--sdk-integration) - [✨ Features](#technical-features) - [🛠️ Tech Stack Decisions](#️-tech-stack-decisions) - [📂 Project Structure](#-project-structure)
+###  Quick Links
+- [ The Translation Gap](#-the-translation-gap) - [ Architecture](#️-architecture-the-three-phase-pipeline) - [ Installation Steps](#-getting-started)
+- [ Usage Example](#-usage--sdk-integration) - [ Features](#technical-features) - [Tech Stack Decisions](#️-tech-stack-decisions) - [ Project Structure](#-project-structure)
 ---
 
 Gradient Ascent is an **autonomous software development lifecycle (SDLC) pipeline** that bridges the gap between disconnected product requirements, manual QA cycles, and vulnerable code. 
@@ -29,7 +29,7 @@ This translation gap leads to **"Silent Failures"**—critical logical oversight
 
 ---
 
-### ⚡ The Translation Gap
+###  The Translation Gap
 
 | Metric | Traditional SDLC | Gradient Ascent Workflow |
 | :--- | :--- | :--- |
@@ -41,7 +41,7 @@ This translation gap leads to **"Silent Failures"**—critical logical oversight
 
 ---
 
-## ⚙️ Architecture: The Three-Phase Pipeline
+##  Architecture: The Three-Phase Pipeline
 
 Gradient Ascent is powered by a multi-agent orchestrated routing core. It splits the SDLC into three distinct execution phases, entirely removing the human bottleneck between requirements and Jira tickets.
 
@@ -77,14 +77,14 @@ flowchart TD
 
 ---
 
-## ✨Technical Features
+##Technical Features
 
-### 🧠 The Agents
+###  The Agents
 - **PM Agent (Requirements Audit):** Parses raw PDFs/MDs, injects heuristic `[REF]` tags, and automatically runs a **PRD Health Check** to flag architectural blind spots before code is written.
 - **QA Agent (Adversarial Matrices):** Generates exhaustive Positive, Negative, and Edge-Case test vectors based strictly on extracted business logic, maintaining an unbroken chain of custody to the original PRD.
 - **Dev Agent (AST Engine):** Deconstructs Python source code into an Abstract Syntax Tree to map logical boundaries and scan for hardcoded secrets or command injections, rendering the topography as a dynamic Mermaid.js flowchart.
 
-### 🛡️ The Routing Core & Sandbox
+###  The Routing Core & Sandbox
 - **Multi-Model Failover Shield:** Driven by `litellm`, the engine dynamically routes between `gemini-3.1-flash-lite`, Groq's ultra-fast `llama-3.3-70b`, and stable fallbacks to ensure 99.9% uptime during API congestion.
 - **Autonomous Self-Healing:** Code is executed in an ephemeral `subprocess` sandbox. If assertions fail, the engine captures the `pytest` traceback and iteratively rewrites the logic up to 3 times to achieve a passing state.
 - **Native Jira Integration:** Automatically formats Epics, Matrix Tables, and AST Bug Reports into Atlassian Document Format (ADF) and pushes them via REST API to active Scrum boards.
@@ -93,11 +93,11 @@ flowchart TD
 
 ---
 
-## 📐 Usage & SDK Integration
+## Usage & SDK Integration
 
 Gradient Ascent features a dual-use architecture. You can run the interactive Streamlit Dashboard (`app.py`), or import it natively into your CI/CD pipeline via the SDK.
 
-### 💻 Headless SDK Example
+### Headless SDK Example
 
 ```python
 from ai_qa_sdk import GradientAscent
@@ -129,7 +129,7 @@ for report in reports:
 
 ---
 
-## 🛠️ Tech Stack Decisions
+## Tech Stack Decisions
 
 - **Why AST over Regex:** Traditional static analysis uses string matching, which is easily bypassed by multi-line strings or aliases (`exec = eval`). Gradient Ascent maps the actual Python Abstract Syntax Tree (`ast.walk`), making vulnerability detection deterministic and immune to syntactic obfuscation.
 - **Why Multi-Model Routing:** Relying on a single LLM provider in an autonomous loop is a single point of failure. The `resilient_completion` core leverages Google Gemini for massive context windows (PRD ingestion) but instantly fails over to Groq's LPU-accelerated Llama 3.3 if rate limits are hit.
@@ -137,7 +137,7 @@ for report in reports:
 
 ---
 
-## ⚠️ Technical Trade-offs (Known & Intentional)
+##  Technical Trade-offs (Known & Intentional)
 
 - **Sandbox Security Boundary:** The current execution sandbox relies on Python's `tempfile` and `subprocess` modules. While isolated locally, true production deployment requires containerization (e.g., Docker/gVisor) to safely execute highly untrusted external code.
 - **Language Lock-in:** The AST static analyzer is currently hardcoded for Python (`ast` module). Expanding to Java/C++ would require integrating multi-language parsers like Tree-sitter.
@@ -147,12 +147,12 @@ for report in reports:
 
 ---
 
-### 📂 Project Structure
+### Project Structure
 
 ```text
 /
-├── app.py                  # 🖥️ The Streamlit Command Center (UI)
-├── ai_qa_sdk/              # 📦 The Portable Python Library
+├── app.py                  # The Streamlit Command Center (UI)
+├── ai_qa_sdk/              #  The Portable Python Library
 │   ├── pm/
 │   │   ├── parser.py       # Heuristic Tagging & Document Parsing
 │   │   └── extractor.py    # PM Agent (Epics & Health Checks)
@@ -160,7 +160,7 @@ for report in reports:
 │   │   └── generator.py    # QA Agent (Traceability Matrices)
 │   └── dev/
 │       └── unit_tester.py  # AST Engine, Sandbox & Self-Healing
-├── .env                    # 🔑 API & Failover Configuration
+├── .env                    #  API & Failover Configuration
 └── requirements.txt        
 ```
 
@@ -168,7 +168,7 @@ for report in reports:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 **Prerequisites**
 - Python 3.9+
@@ -188,7 +188,7 @@ for report in reports:
 
 ---
 
-## 👨‍💻 Author(s)
+##  Author(s)
 
 - Ameetesh Awadh
 - Arnav Srivastava
